@@ -1,0 +1,23 @@
+path: dataset
+train: images/train
+val: images/val
+
+names:
+  0: fish
+  1: coral
+  2: diver
+  3: starfish
+  4: jellyfish
+  5: turtle
+  6: shark
+  7: octopus
+  8: crab
+  9: seaweed
+  10: stingray
+  11: seahorse
+  12: lobster
+  13: anemone
+  14: rock
+  15: shipwrek
+  16: submarine
+  

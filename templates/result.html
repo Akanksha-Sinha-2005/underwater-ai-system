@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Analysis Results</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<h1>AI Enhancement Results</h1>
+<div class="image-container">
+<div class="image-card">
+<h3>Original Image</h3>
+<img src="{{original}}">
+</div>
+<div class="image-card">
+<h3>Enhanced Image</h3>
+<img src="{{enhanced}}">
+</div>
+<div class="image-card">
+<h3>AI Heatmap</h3>
+<img src="{{heatmap}}">
+</div>
+</div>
+<div class="metrics">
+<h2>Image Quality Metrics</h2>
+<div class="metric-card">
+<h3>PSNR</h3>
+<p>{{psnr}}</p>
+</div>
+<div class="metric-card">
+<h3>SSIM</h3>
+<p>{{ssim}}</p>
+</div>
+<div class="metric-card">
+<h3>UIQM</h3>
+<p>{{uiqm}}</p>
+</div>
+</div>
+<div class="detections">
+<h2>Threat Detection</h2>
+{% if detections %}
+<ul>
+{% for d in detections %}
+<li>
+<strong>{{d.object}}</strong>
+Confidence : {{d.confidence}}
+</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No threats detected</p>
+{% endif %}
+</div>
+<br>
+<a href="/" class="back-button">Upload Another Image</a>
+</body>
+</html>
