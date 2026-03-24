@@ -1,0 +1,15 @@
+# Ignore uploads and results
+static/uploads/
+static/results/
+
+# Ignore images
+*.jpg
+*.png
+*.jpeg
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.env
